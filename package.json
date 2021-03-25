@@ -1,6 +1,6 @@
 {
   "name": "arianne",
-  "version": "0.1.1",
+  "version": "0.1.9",
   "private": false,
   "main": "dist/index.js",
   "module": "dist/index.js",
@@ -8,17 +8,12 @@
     "dist",
     "README.md"
   ],
-  "babel": {
-    "presets": [
-      "@babel/preset-react"
-    ]
-  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "publish:npm": "RD /S /Q dist && mkdir dist &&  babel src/component -d dist --copy-files"
+    "publish:npm": "RD /S /Q dist && mkdir dist &&  babel src/lib -d dist --copy-files"
   },
   "eslintConfig": {
     "extends": [
@@ -41,16 +36,21 @@
   "devDependencies": {
     "@babel/cli": "^7.13.10",
     "@babel/preset-react": "^7.12.13",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-scripts": "4.0.3",
-    "web-vitals": "^1.0.1",
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10"
+    "web-vitals": "^1.0.1"
   },
-    "peerDependencies": {
+  "dependencies": {
+    "@babel/cli": "^7.13.10",
+    "@babel/preset-react": "^7.12.13",
+    "arianne": "^0.1.9",
+    "gsap": "^3.6.0",
     "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "react-dom": "^17.0.1",
+    "styled-jsx": "^3.4.4"
   }
 }

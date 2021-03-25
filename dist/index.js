@@ -1,2 +1,2 @@
-import Test from "./Test";
-export { Test };
+import Button from './components/Buttons/Button';
+export { Button };
